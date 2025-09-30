@@ -1,0 +1,41 @@
+[2025-09-30 23:32:21 UTC] ghdl -i  design.vhd testbench.vhd  && ghdl -m  ula_top_tb && ghdl -r  ula_top_tb '--stop-time=18000ms'   
+analyze design.vhd
+analyze testbench.vhd
+elaborate ula_top_tb
+testbench.vhd:107:13:@10us:(report note): Testing: ADD: 5 + 3 = 8
+testbench.vhd:145:13:@295450ns:(report note): ADD: 5 + 3 = 8 PASSED
+testbench.vhd:107:13:@305450ns:(report note): Testing: ADD: 15 + 1 = 0 (carry)
+testbench.vhd:145:13:@590890ns:(report note): ADD: 15 + 1 = 0 (carry) PASSED
+testbench.vhd:107:13:@600890ns:(report note): Testing: ADD: 7 + 1 = -8 (overflow)
+testbench.vhd:145:13:@886330ns:(report note): ADD: 7 + 1 = -8 (overflow) PASSED
+testbench.vhd:107:13:@896330ns:(report note): Testing: SUB: 7 - 2 = 5
+testbench.vhd:145:13:@1181770ns:(report note): SUB: 7 - 2 = 5 PASSED
+testbench.vhd:107:13:@1191770ns:(report note): Testing: SUB: 0 - 1 = 15 (borrow)
+testbench.vhd:145:13:@1477210ns:(report note): SUB: 0 - 1 = 15 (borrow) PASSED
+testbench.vhd:107:13:@1487210ns:(report note): Testing: AND: 12 & 10 = 8
+testbench.vhd:145:13:@1772650ns:(report note): AND: 12 & 10 = 8 PASSED
+testbench.vhd:107:13:@1782650ns:(report note): Testing: OR: 5 | 3 = 7
+testbench.vhd:145:13:@2068090ns:(report note): OR: 5 | 3 = 7 PASSED
+testbench.vhd:107:13:@2078090ns:(report note): Testing: XOR: 5 ^ 3 = 6
+testbench.vhd:145:13:@2363530ns:(report note): XOR: 5 ^ 3 = 6 PASSED
+testbench.vhd:107:13:@2373530ns:(report note): Testing: NOT: ~5 = 10
+testbench.vhd:145:13:@2658970ns:(report note): NOT: ~5 = 10 PASSED
+testbench.vhd:107:13:@2668970ns:(report note): Testing: NOT: ~0 = 15
+testbench.vhd:145:13:@2954410ns:(report note): NOT: ~0 = 15 PASSED
+testbench.vhd:107:13:@2964410ns:(report note): Testing: INC: 5 + 1 = 6
+testbench.vhd:145:13:@3249850ns:(report note): INC: 5 + 1 = 6 PASSED
+testbench.vhd:107:13:@3259850ns:(report note): Testing: INC: 15 + 1 = 0 (overflow)
+testbench.vhd:145:13:@3545290ns:(report note): INC: 15 + 1 = 0 (overflow) PASSED
+testbench.vhd:107:13:@3555290ns:(report note): Testing: DEC: 5 - 1 = 4
+testbench.vhd:145:13:@3840730ns:(report note): DEC: 5 - 1 = 4 PASSED
+testbench.vhd:107:13:@3850730ns:(report note): Testing: DEC: 0 - 1 = 15 (underflow)
+testbench.vhd:145:13:@4136170ns:(report note): DEC: 0 - 1 = 15 (underflow) PASSED
+testbench.vhd:107:13:@4146170ns:(report note): Testing: ZERO FLAG: 0 + 0 = 0
+testbench.vhd:145:13:@4431610ns:(report note): ZERO FLAG: 0 + 0 = 0 PASSED
+testbench.vhd:107:13:@4441610ns:(report note): Testing: FLAGS: -8 + -8 = 0 (carry+overflow)
+testbench.vhd:145:13:@4727050ns:(report note): FLAGS: -8 + -8 = 0 (carry+overflow) PASSED
+testbench.vhd:320:9:@4737050ns:(report note): Test 17: Pokemon button complete cycle
+testbench.vhd:345:9:@5008450ns:(report note): Test 18: Show button functionality
+testbench.vhd:363:9:@5225570ns:(report note): Test 19: Result button functionality
+testbench.vhd:369:9:@5279850ns:(report note): Test 20: Final reset test
+testbench.vhd:374:9:@5334130ns:(report note): === ALL TESTS COMPLETED SUCCESSFULLY! ===
