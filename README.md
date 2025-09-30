@@ -1,0 +1,3 @@
+- This is a 4-bit ALU project, made for the Digital Systems (EEL480) class in the Federal University of Rio de Janeiro.
+- The ALU has 8 operations (Addition, Subtraction, AND, OR, XOR, NOT, Increment and Decrement).
+- This code is intended to be implemented in a FPGA Xilinx SPARTAN 3A/3AN board.
